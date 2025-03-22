@@ -17,7 +17,7 @@ def get_color_at_point(x, y):
 typeway = easygui.buttonbox(msg="请选择使用模式", title="提示", choices=typeways)
 print(typeway)
 typeway = typeways.index(typeway)
-if typeway == 4:
+if typeway == 2:
     F3 = True
 easygui.msgbox(msg=typeways[typeway]+"\n点击OK键开始进行使用（q键强制退出）", title="提示")
 while True:
@@ -26,7 +26,7 @@ while True:
         f3(top_left_x,top_left_y)
     needto_check_color = (231, 244, 253)
     color_for_password = get_color_at_point(861, 798)
-    if get_color_at_point(987 ,1269) == (255, 232, 135) and 2==typeway:
+    if get_color_at_point(987 ,1269) == (255, 232, 135) and 1==typeway:
         pyautogui.moveTo(987 ,1269, duration=0)
         pyautogui.click()
     if typeway == 0:
